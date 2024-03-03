@@ -1,0 +1,7 @@
+<!-- logo.wxml -->
+<view class="logo-container">
+  <image class="logo-image" src="logo.png"></image>
+  <button class="enter-button" bindtap="enterApp">点击进入小程序</button>
+</view>
+
+

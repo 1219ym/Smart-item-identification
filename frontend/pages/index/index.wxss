@@ -1,0 +1,130 @@
+/* index.wxss */
+.page-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('your-background-image-url.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  opacity: 0.5; /* Adjust the opacity as needed */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.camera-container {
+  position: relative;
+  width: 80vw;
+  height: 60vh;
+  border: 2px solid #3498db;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.camera-switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.capture-button {
+  margin-top: 10px;
+  padding: 12px 24px;
+  background-color: #db34c5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.capture-button:hover {
+  background-color: #2077c8;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  user-select: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
+  max-height: 80vh; /* 设置最大高度，超过后可滚动 */
+  overflow-y: auto; /* 添加垂直滚动条 */
+}
+
+.show-more-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.close-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .camera-container {
+    width: 60vw;
+    height: 40vh;
+  }
+
+  .capture-button {
+    font-size: 18px;
+  }
+
+  .modal-content {
+    padding: 30px;
+    font-size: 16px;
+  }
+
+  .show-more-button,
+  .close-button {
+    font-size: 16px;
+  }
+}
